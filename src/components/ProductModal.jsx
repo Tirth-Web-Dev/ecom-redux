@@ -39,10 +39,10 @@ const ProductModal = ({ product, closeModal }) => {
 >
 
       {/* Modal */}
-      <motion.div onClick={(e) => e.stopPropagation()}   layoutId={`product-${product.id}`}  transition={{
-    type: "spring",
-    stiffness: 200,
-    damping: 10
+      <motion.div onClick={(e) => e.stopPropagation()}   layoutId={`product-${product.id}`}  
+      transition={{
+         duration: 0.25,
+    ease: [0.25, 0.1, 0.25, 1]
   }}
  className="bg-white rounded-2xl max-w-4xl w-full p-6 relative shadow-2xl">
 

@@ -21,14 +21,14 @@ const ProductGrid = () => {
       {filteredProduct.length === 0 ? (
         <h1 className="text-center text-xl font-semibold">No Products Found</h1>
       ) : (<AnimatePresence mode="popLayout">
-        <motion.div layout transition={{type: "spring", stiffness:360, damping: 20}} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <motion.div layout  transition={{ duration: 0.35, ease: "easeInOut" }} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           
           {filteredProduct.map((p) => (
             <motion.div key={p.id} layout
-      initial={{ opacity: 0, scale: 0.9 }}
+      initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.9 }}
-      transition={{ type: "spring", duration: 0.4, stiffness: 300, damping: 22  }}
+      exit={{ opacity: 0, scale: 0.5 }}
+       transition={{ duration: 0.35, ease: "easeInOut" }}
 >
             <ProductsCard
               
